@@ -1,0 +1,59 @@
+.main-body{
+  background-color:#edf5f7;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+
+}
+
+nav{
+  font-family: 'IM Fell French Canon SC', serif;
+  font-size: 1.3rem;
+}
+
+.d-block{
+  width:30px;
+  height:500px;
+  padding-top: 40px;
+  opacity:0.5;
+}
+
+.homeText{
+  font-size: 3rem;
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 40px 0;
+  color:#35ccc9;
+  padding-top: 5px;
+}
+
+.homePara{
+  text-align: center;
+  display: block;
+  margin: auto;
+  font-size: 2rem;
+  padding-bottom: 5px;
+}
+
+.homeImg{
+ width:40%;
+ border-radius: 8px;
+ border: 2px solid black;
+ position:relative;
+ display: block;
+ margin: auto;
+}
+
+.footer-tag{
+  position:absolute;
+  display: inline-block;
+  bottom:0;
+  left:600px;
+
+}
+
+.footer-tag{
+text-align: center;
+}
+
+/*------Scrollbar Design---------*/

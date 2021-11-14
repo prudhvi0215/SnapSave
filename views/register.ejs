@@ -1,0 +1,48 @@
+<%- include("header"); -%>
+
+<div class="register-form">
+  <h2 style="text-align:center;padding:30px 0">Register</h2>
+  <h5 style="color:green"> <%= successmsg %> </h5>
+<form action="/register" method="post">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" name="usrmail" id="inputEmail4" required>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Password</label>
+      <input type="password" class="form-control" name="pwd" id="inputPassword4" minlength="8" required>
+    </div>
+  </div>
+  <!-- <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" name="addr" placeholder="1234 Main St" required>
+  </div> -->
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Mobile Number</label>
+      <input type="tel" class="form-control" name="number" id="inputCity" required>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Country</label>
+      <input type="text" id="inputState" class="form-control" name="cntry" required>
+    </div>
+    <!-- <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip" name="zipcode" required>
+    </div> -->
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" name="button">Sign up</button>
+</form>
+</div>
+<%- include("footer"); -%>

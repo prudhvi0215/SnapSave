@@ -1,0 +1,38 @@
+<%- include("dashboardHeader"); -%>
+
+<div class="container" style="margin:50px;margin-bottom:50px">
+  <div class="col">
+    <div class="col-md-9 m-auto">
+      <h1 class="text-center display-4 my-4">Add Your Files</h1>
+
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="custom-file mb-3">
+
+          <input type="file" name="file" id="file" class="custom-file-input"><br><br>
+          <label for="file" class="custom-file-label">Choose File</label>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary btn-block">
+      </form>
+      <br>
+      <% if(files){ %>
+      <% files.forEach(function(file){ %>
+      <div class="card card-body mb-3">
+        <% if(file.isImage) { %>
+        <img src="image/<%= file.filename %> " alt="">
+        <% } else { %>
+        <%= file.filename %>
+        <%  } %>
+        <form method="POST" action="/files/<%= file._id %>?_method=DELETE">
+          <button class="btn btn-danger btn-block mt-3" name="button">Delete</button>
+        </form>
+      </div>
+      <%  }) %>
+      <% } else { %>
+      <p>No Files To Show</p>
+      <% } %>
+
+    </div>
+
+  </div>
+
+</div>

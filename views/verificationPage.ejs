@@ -1,0 +1,15 @@
+<%- include("header"); -%>
+
+<h1 style="text-align:center;margin:30px">We have sent you the verification code</h1>
+<form action="/verificationPage" method="post">
+    <input type="hidden" name="num1" value="{{num}}" />
+
+    <div style="width:400px; margin:0 auto;">
+      <label for="">Enter OTP</label>
+      <input type="text" name="otp" />
+      <button type="submit" class="btn btn-primary">Check Code</button>
+    </div>
+
+</form>
+
+<%- include("footer"); -%>
